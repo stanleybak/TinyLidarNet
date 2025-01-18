@@ -7,10 +7,17 @@
 
 
 
-https://github.com/zarrar1607/TinyLidarNet/assets/61513813/93315cb2-0ab6-4b75-86f3-f634e1560aa8
 
+## Stan Fork Notes
+I modified KU's repo to do training without requiring installing ROS (using bagpy instead). Here are my notes on commands to run:
 
-
+```
+conda create --name tf2 python=3.12
+conda activate tf2
+pip install scikit-learn==1.6.1 bagpy==0.5 tensorflow==2.18.0
+python train_bagpy.py
+```
+(the loss at epoch 20 should be around 0.0060)
 
 ## Setup
 This repository is designed for use with ROS Noetic. Hardware we use include an NVIDIA Jetson Xavier NX, Hokuyo Lidar UST10-LX, VESC-MKIV, and Logitech F710 Gaming Controller. The operating system used is Linux 5.10.104-tegra aarch64. Follow the steps below to set up the environment:
